@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{88628CDC-44FE-49CF-94AC-57C97DBB8C35}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{EF21DDE4-06EC-4011-AC65-9C7A6BF64E70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IoC", "IoC", "{E4E8D4DF-26A3-4FB7-A990-1718E1D31304}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArchLite.Web", "ArchLite.Web\ArchLite.Web.csproj", "{44A4B0B0-42A7-4A44-BDA4-F7EB5AAA857A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArchLite.Application", "ArchLite.Application\ArchLite.Application.csproj", "{A9AFA10F-9DA0-45F4-BC84-90E8EA56FDD8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArchLite.IoC", "ArchLite.IoC\ArchLite.IoC.csproj", "{EC333364-5D80-48C2-ACA7-71FA6B76EE7A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{7A0B9301-CC5A-4E06-B8D7-9C5DA4C2C4D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchLite.Data", "ArchLite.Data\ArchLite.Data.csproj", "{4D7CB719-9514-4874-A412-DE3EEA86CA01}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44A4B0B0-42A7-4A44-BDA4-F7EB5AAA857A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44A4B0B0-42A7-4A44-BDA4-F7EB5AAA857A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44A4B0B0-42A7-4A44-BDA4-F7EB5AAA857A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44A4B0B0-42A7-4A44-BDA4-F7EB5AAA857A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9AFA10F-9DA0-45F4-BC84-90E8EA56FDD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9AFA10F-9DA0-45F4-BC84-90E8EA56FDD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9AFA10F-9DA0-45F4-BC84-90E8EA56FDD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9AFA10F-9DA0-45F4-BC84-90E8EA56FDD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC333364-5D80-48C2-ACA7-71FA6B76EE7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC333364-5D80-48C2-ACA7-71FA6B76EE7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC333364-5D80-48C2-ACA7-71FA6B76EE7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC333364-5D80-48C2-ACA7-71FA6B76EE7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D7CB719-9514-4874-A412-DE3EEA86CA01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D7CB719-9514-4874-A412-DE3EEA86CA01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D7CB719-9514-4874-A412-DE3EEA86CA01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D7CB719-9514-4874-A412-DE3EEA86CA01}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{44A4B0B0-42A7-4A44-BDA4-F7EB5AAA857A} = {EF21DDE4-06EC-4011-AC65-9C7A6BF64E70}
+		{A9AFA10F-9DA0-45F4-BC84-90E8EA56FDD8} = {88628CDC-44FE-49CF-94AC-57C97DBB8C35}
+		{EC333364-5D80-48C2-ACA7-71FA6B76EE7A} = {E4E8D4DF-26A3-4FB7-A990-1718E1D31304}
+		{4D7CB719-9514-4874-A412-DE3EEA86CA01} = {7A0B9301-CC5A-4E06-B8D7-9C5DA4C2C4D7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF109A3A-5470-416B-B1F4-4EF99A83A375}
+	EndGlobalSection
+EndGlobal
