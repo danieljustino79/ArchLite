@@ -1,4 +1,5 @@
 ﻿using ArchLite.Application.Services;
+using ArchLite.Data.Models.Requests;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ArchLite.Web.Controllers
@@ -24,6 +25,12 @@ namespace ArchLite.Web.Controllers
         public IActionResult List()
         {
             return Ok(userService.GetUsers());
+        }
+
+        [HttpPost("login")]
+        public IActionResult login([FromBody] Login login)
+        {
+            return Ok(userService.Login(login));
         }
     }
 }
