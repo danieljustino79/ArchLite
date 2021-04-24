@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ArchLite.Application\ArchLite.Application.csproj" />
     <ProjectReference Include="..\ArchLite.IoC\ArchLite.IoC.csproj" />
   </ItemGroup>
 
