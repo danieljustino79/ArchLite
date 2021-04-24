@@ -29,7 +29,7 @@ namespace ArchLite.Data.Repositories.Implementations
             {
                 Id = 1,
                 Email = "cel@g",
-                Password = "",
+                Password = "1234",
                 CreateAt = DateTime.Now,
                 IsAdmin = false
             });
@@ -37,7 +37,7 @@ namespace ArchLite.Data.Repositories.Implementations
             {
                 Id = 1,
                 Email = "dan@g",
-                Password = "",
+                Password = "1234",
                 CreateAt = DateTime.Now,
                 IsAdmin = true
             });

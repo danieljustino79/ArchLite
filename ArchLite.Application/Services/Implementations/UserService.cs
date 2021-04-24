@@ -1,6 +1,8 @@
-﻿using ArchLite.Data.Models;
+﻿using ArchLite.Application.Adapters;
+using ArchLite.Data.Models.Dto;
 using ArchLite.Data.Models.Requests;
 using ArchLite.Data.Models.Responses;
+using ArchLite.Data.Models.Validation;
 using ArchLite.Data.Repositories;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,9 +23,20 @@ namespace ArchLite.Application.Services.Implementations
             return "user 1";
         }
 
-        public IEnumerable<User> GetUsers()
+        public ResponseDto GetUsers()
         {
-            return userRepository.GetUsers();
+            var list = userRepository.GetUsers();
+
+
+            if(list.Count() == 0)
+            {
+            //    var errors = new List<ErrorValidation>();
+            //    errors.Add(ErrorValidation.CreateSummary("User not found."));
+                return ResponseDto.Create(new List<string>(), 404, true);
+            }
+
+            var listViewModel = UserAdapter.ListUserToViewModel(list);
+            return ResponseDto.Create(listViewModel, 200, true);
         }
 
         public UserViewModel GetUserByEmailPassword(string email, string password)
@@ -40,9 +53,27 @@ namespace ArchLite.Application.Services.Implementations
             return user;
         }
 
-        public UserViewModel Login(Login login)
+        public ResponseDto Login(Login login)
         {
-            return GetUserByEmailPassword(login.Email, login.Password);
+            var errors = new List<ErrorValidation>();
+            errors.AddRange(LoginValidation.Email(login.Email));
+            errors.AddRange(LoginValidation.Password(login.Password));
+
+            if(errors.Count > 0)
+            {
+                return ResponseDto.Create(errors, 400, true);
+            }
+
+            var user = GetUserByEmailPassword(login.Email, login.Password);
+            if(user == null)
+            {
+                errors.Add(ErrorValidation.CreateSummary("E-mail or Password does not match."));
+                return ResponseDto.Create(errors, 404, true);
+            }
+
+            var list = new List<UserViewModel>();
+            list.Add(user);
+            return ResponseDto.Create(list, 200, true);
         }
     }
 }
